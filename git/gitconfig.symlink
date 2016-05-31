@@ -9,6 +9,14 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(white)- %an%C(reset)%C(bold magenta)%d%C(reset)' --all
+        lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold black)%aD%C(reset) %C(bold red)(%ar)%C(reset)%C(blink magenta)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+        lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold black)%aD%C(reset) %C(bold red)(%ar)%C(reset)%C(blink magenta)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' 
+
+        lg = !"git lg1"
+
+        #like - git prstash origin 3 dest-branch
+        prstash = !"f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
 [color]
         diff = auto
         status = auto
@@ -17,6 +25,8 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+[credential]
+        helper = osxkeychain
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -31,3 +41,5 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+[url "https://"]
+    insteadOf = git://
