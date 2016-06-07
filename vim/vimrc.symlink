@@ -16,8 +16,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jnurmine/Zenburn'
-Plugin 'rking/ag'
-Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
@@ -27,10 +27,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Zuckonit/vim-airline-tomato'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'plasticboy/vim-markdown'
@@ -39,7 +39,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-surround'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/vimshell'
-
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -52,9 +53,8 @@ filetype plugin indent on
 " }}}
 
 " Colors {{{
-set background=dark
 "set t_Co=256
-colorscheme zenburn
+colorscheme zenburn 
 " }}}
 
 " Misc {{{

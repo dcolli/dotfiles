@@ -5,9 +5,9 @@
         protocol = https
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
+        promote = !$ZSH_DOTFILES/bin/git-promote
+        wtf     = !$ZSH_DOTFILES/bin/git-wtf
+        rank-contributors = !$ZSH_DOTFILES/bin/git-rank-contributors
         count   = !git shortlog -sn
         lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(white)- %an%C(reset)%C(bold magenta)%d%C(reset)' --all
         lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold black)%aD%C(reset) %C(bold red)(%ar)%C(reset)%C(blink magenta)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
@@ -31,6 +31,8 @@
         whitespace = nowarn
 [mergetool]
         keepBackup = false
+[diff]
+        renameLimit = 6000
 [difftool]
         prompt = false
 [help]

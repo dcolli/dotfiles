@@ -50,7 +50,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump frontend-search)
+plugins=(git autojump frontend-search zsh-autosuggestions)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
@@ -118,7 +118,7 @@ export PATH=$PATH:/usr/local/mongodb/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export DOCKER_IMAGEDIR_PATH="~/docker_images" #add docker images path
 
-export NVM_DIR="/Users/dcolli1/.nvm"
+export NVM_DIR="/usr/local/Cellar/nvm/0.31.1"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH=~/git/depot_tools:$PATH
@@ -126,7 +126,7 @@ export PATH=~/git/depot_tools:$PATH
 alias gs='git status'
 alias gl='git lg2'
 alias c='clear'
-alias tmux="tmux -2"
+#alias tmux="tmux -2"
 alias pys="python -m SimpleHTTPServer"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -137,23 +137,15 @@ export PATH=~/esptools_mnt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Load zsh-syntax-highlighting.
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load zsh-autosuggestions.
-source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Enable autosuggestions automatically.
-zle-line-init() {
-    zle autosuggest-start
-}
 zle -N zle-line-init
 
 bindkey '^T' autosuggest-toggle
-
-#source ~/.fonts/fontawesome-regular.sh
-#source ~/.fonts/octicons-regular.sh
-#source ~/.fonts/pomicons-regular.sh
-source ~/.fonts/Inconsolata+Awesome.sh
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
