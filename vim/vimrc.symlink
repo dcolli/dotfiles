@@ -41,6 +41,9 @@ Plugin 'Shougo/vimproc'
 Plugin 'Shougo/vimshell'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'sjl/vitality.vim'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -146,7 +149,7 @@ map <leader>n :NERDTreeToggle<CR>
 " }}}
 
 " NERDTree {{{
-let g:NERDTreeWinPos = "right"
+" let g:NERDTreeWinPos = "right"
 " }}}
 
 " CtrlP {{{

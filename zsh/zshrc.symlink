@@ -100,8 +100,7 @@ export JAVA_6_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 #latest JDK 7 by Oracle
 export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 #latest preview JDK 8 by Oracle
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
- 
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
 #default JDK is 8 
 export JAVA_HOME=$JAVA_8_HOME
  
@@ -153,8 +152,8 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Apache Spark Shell
-export YARN_CONF_DIR=~/git/hadoop/spark-1.6.1-bin-hadoop2.4/conf/
-export SPARK_HOME=~/git/hadoop/spark-1.6.1-bin-hadoop2.4/
+#export YARN_CONF_DIR=~/git/hadoop/spark-1.6.1-bin-hadoop2.4/conf/
+#export PATH=$SPARK_HOME/bin:$PATH
 export PATH=$SPARK_HOME/bin:$PATH
 
 # export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)

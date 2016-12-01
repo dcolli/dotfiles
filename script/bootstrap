@@ -137,8 +137,15 @@ install_dotfiles () {
   done
 }
 
+change_shell () {
+    info 'changing to zsh'
+
+    chsh -s $(which zsh)
+}
+
 setup_gitconfig
 install_dotfiles
+change_shell
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
