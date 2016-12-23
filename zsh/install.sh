@@ -4,7 +4,7 @@
 #
 # This installs oh-my-zsh locally
 #
-if test ! [ -f ~/.oh-my-zsh ]
+if [[ ! -d ~/.oh-my-zsh ]]
 then
     echo "   Installing oh-my-zsh for you."
 
