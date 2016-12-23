@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Lists all sshkeys and bitness
+#
+for keyfile in ~/.ssh/id_*; do ssh-keygen -l -f "${keyfile}"; done | uniq

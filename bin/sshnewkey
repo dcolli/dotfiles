@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Generate a new ed25519 key
+#
+ssh-keygen -o -a 100 -t ed25519
