@@ -8,7 +8,7 @@ then
 
     mkdir -p "$HOME/.vim/bundle"
     cd "$HOME/.vim/bundle" && git clone https://github.com/VundleVim/Vundle.vim
-    vim +PluginInstall 
+    vim --not-a-term +PluginInstall 
 fi
 
 exit 0
