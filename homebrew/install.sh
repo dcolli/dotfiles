@@ -6,7 +6,7 @@
 # using Homebrew.
 
 # Check for Homebrew
-if test ! $(which brew)
+if [[ !  -f `which brew` ]]
 then
   echo "  Installing Homebrew for you."
 

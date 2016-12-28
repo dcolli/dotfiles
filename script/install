@@ -13,18 +13,4 @@ brew bundle
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
-# inconsolata devicons
-if [[ $(uname) == 'Darwin' ]]; then
-    cd "$HOME/Library/Fonts" && curl -fLo "Inconsolata for Powerline Nerd Font Complete Mono.otf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Inconsolata/complete/Inconsolata%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.otf
-else
-    mkdir -p "$HOME/.local/share/fonts"
-    cd "$HOME/.local/share/fonts" && curl -fLo "Inconsolata for Powerline Nerd Font Complete Mono.otf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Inconsolata/complete/Inconsolata%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.otf
-fi
 
-if [[ -n $(which fc-cache) ]]; then
-    fc-cache -f "$HOME/.local/share/fonts"
-fi
-
-# Instant Markdown
-mkdir -p .vim/after/ftplugin/markdown && cd $_
-curl -fLo instant-markdown.vim https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim

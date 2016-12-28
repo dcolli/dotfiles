@@ -1,4 +1,6 @@
-if test ! $(which spoof)
-then
-  sudo npm install spoof -g
-fi
+#!/bin/bash
+#
+# Install latest node
+
+nvm install --lts
+

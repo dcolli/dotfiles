@@ -10,8 +10,9 @@ then
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-    if test ! [ -f ~/.oh-my-zsh ] 
+    if [[ ! -f ~/.oh-my-zsh ]] 
     then
+        echo "   Failed installing oh-my-zsh."
         exit -1
     fi
 fi
