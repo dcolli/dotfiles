@@ -15,6 +15,12 @@ then
         echo "   Failed installing oh-my-zsh."
         exit -1
     fi
+
+    if [[ -f ~/.zshrc.pre-oh-my-zsh ]]
+    then
+        echo "   Moving zshrc back"
+        mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+    fi
 fi
 
 # zsh-autosuggestion
