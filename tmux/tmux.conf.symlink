@@ -22,8 +22,6 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
 
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm'
 
 #set-option -g mouse-select-pane on
 set -g default-terminal "screen-256color"
@@ -71,3 +69,6 @@ bind M \
     set -g mouse-select-pane off \;\
     set -g mouse-select-window off \;\
     display 'Mouse: OFF'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
