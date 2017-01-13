@@ -44,6 +44,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sjl/vitality.vim'
+Plugin 'vim-scripts/LargeFile'
 
 call vundle#end() 
 filetype plugin indent on 
